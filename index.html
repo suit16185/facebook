@@ -1,188 +1,602 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure and Change Your Facebook Password</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+  margin:0px;
+  padding:0px;
+  font-family: sans-serif;
+}
+.navBar {
+  background:black;
+  width:360px;
+  color:white;
+  display:flex;
+  align-items:center;
+  position:fixed;
+  z-index: 100;
+  
+}
+.navLogo {
+  margin-right:2rem;
+}
+#navLogo {
+  color:yellow;
+  font-size:1.5rem;
+  padding:10px;
+}
+#web {
+  font-size:1rem;
+}
+.link {
+  color:white;
+  display:inline-block;
+}
+a{
+  color:white;
+  text-decoration-line: none;
+  padding:10px;
+}
+.topBar {
+  background:green;
+  width:340px;
+  display:flex;
+  padding:10px;
+  align-items:center;
+  border-bottom:1px solid black;
+  position:absolute;
+  top:47px;
+  position:fixed;
+  z-index: 99;
+}
+.toggleBar {
+  border-right:1px solid silver;
+  width:40px;
+}
+.toggle {
+  font-size:1.5rem;
+  align-items: center;
+  text-align:center;
+  margin-left:-10px;
+  margin-right:10px;
+}
+.socialBar {
+  border-right: 1px solid silver;
+  width: 140px;
+  margin-left:10px;
+}
 
-        header {
-            background-color: #4267B2;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        #hero {
-            background-color: #4267B2;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        #hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        #hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .cta-btn {
-            padding: 10px 20px;
-            background-color: #FFB6C1;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .cta-btn:hover {
-            background-color: #FF6F91;
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .step {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            #hero h1 {
-                font-size: 2em;
-            }
-        }
-
-    </style>
+.social {
+  font-size: 1rem;
+  display:flex;
+}
+.headingBar {
+  margin-left:20px;
+}
+.all {
+  margin-right:20px;
+  color:#fefefe;
+}
+.heading {
+  color:#fefefe;
+}
+.container {
+  display:flex;
+  position:absolute;
+  top:96px;
+  position:fied;
+}
+.navigationBar {
+  background:green;
+  border-right:1px solid black;
+  width:120px;
+  color:white;
+  height:100vh;
+  display:none;
+  position:fixed;
+}
+.naviBtn {
+  display:flex;
+  color:black;
+  align-items:center;
+  border-bottom:1px solid black;
+}
+.naviBtn:hover {
+  background:red;
+}
+.naviLogo {
+  padding:7px;
+}
+.naviText2 {
+  font-size:12px;
+  padding-left:5px;
+}
+.containt-Box {
+  padding:5px;
+}
+.db-hidden {
+  display:none;
+}
+.mk-hidden {
+  display:none;
+}
+.ck-hidden {
+  display: none;
+}
+.navi2 {
+  display:flex;
+  width:220px;
+  display:none;
+}
+  </style>
 </head>
+
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#steps">Steps</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <h1>Secure Your Facebook Profile & Change Your Password</h1>
-        <p>Take control of your privacy by securing your Facebook account and changing your password to prevent unauthorized access.</p>
-        <a href="#steps" class="cta-btn">Get Started</a>
-    </section>
-
-    <section id="overview">
-        <h2>Why You Should Secure Your Facebook Account</h2>
-        <p>Your Facebook account holds a lot of personal information. Securing it by changing your password regularly can prevent identity theft, unauthorized access, and privacy violations.</p>
+  <navbar>
+    <div class="navBar">
+      <div class="navLogo">
+        <p id="navLogo">Rdx_/<sup id="web">web</sup></p>
+      </div>
+      <div class="navTools">
         <ul>
-            <li>Protect your personal data from hackers.</li>
-            <li>Ensure privacy for your posts and personal details.</li>
-            <li>Monitor suspicious activities and unauthorized logins.</li>
+          <li class="link" id="home"><a href="https://www.google.com">Home</a></li>
+          
+          
+          <li class="link" id="home"><a href="https://www.google.com">About</a></li>
+          
+          
+          <li class="link" id="home"><a href="https://www.google.com">Contract</a></li>
         </ul>
-    </section>
-
-    <section id="steps">
-        <h2>Steps to Secure and Change Your Password</h2>
-        <div class="step">
-            <h3>1. Change Your Password</h3>
-            <p>It's important to regularly change your Facebook password to something secure and unique. A strong password includes a combination of uppercase, lowercase, numbers, and symbols.</p>
-            <a href="https://www.facebook.com/settings?tab=security" target="_blank" class="cta-btn">Change Password Now</a>
+      </div>
+    </div>
+  </navbar>
+  <topbar>
+    <div class="topBar">
+      <div class="toggleBar" id="toggleBar">
+        <div class="toggle" id="toggle">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="step">
-            <h3>2. Enable Two-Factor Authentication</h3>
-            <p>Enhance your security by enabling two-factor authentication (2FA). This adds an additional layer of security, requiring a second code sent to your phone in addition to your password.</p>
-            <a href="https://www.facebook.com/settings?tab=security" target="_blank" class="cta-btn">Enable 2FA</a>
+      </div>
+      <div class="socialBar">
+        <div class="social">
+          
+          <div class="all" id="facebook">
+          <i class="fa-brands fa-facebook"></i>
+          </div>
+        
+          <div class="all" id="instagram">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        
+        
+          <div class="all" id="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          
+          
+          <div class="all" id="youtube">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        
+        
+        
         </div>
-        <div class="step">
-            <h3>3. Review Active Sessions</h3>
-            <p>Check the devices currently logged into your Facebook account. Log out from any sessions that you do not recognize or trust.</p>
-            <a href="https://www.facebook.com/settings?tab=security" target="_blank" class="cta-btn">Review Sessions</a>
+      </div>
+      <div class="headingBar">
+        <div class="heading">
+          <b>
+            <p id ="heading">HEADING</p>
+          </b>
+          </div>
+      </div>
+    </div>
+  </topbar>
+  <container>
+    <div class="container">
+      <div class="navi2" id="navi2">navi2</div>
+      <div class="navigationBar" id="navigationBar">
+        <!------navigation------->
+        <div class="naviBtn">
+          <div class="naviLogo">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <div class="naviText" id="db-hide">
+            <b>
+            Dashboard
+            </b>
+          </div>
+          </div>
+        
+        <div class="db-hidden" id="db-hidden">
+          <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-user"></i>
+           </div>
+           <div class="naviText2"><b>
+             SignUp/Login
+             </b>
+           </div>
+          </div>
+        
+        
+           <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-money-bill"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+             Earnings
+           </b>
+         </div>
+          </div>  
+        
+         <div class="naviBtn">
+           <div class="naviLogo">
+            <i class="fa-solid fa-wallet"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+             Withdraw
+           </b>
+         </div>
+          </div>  
         </div>
-        <div class="step">
-            <h3>4. Be Cautious of Phishing Scams</h3>
-            <p>Be aware of emails or messages that ask for your personal information or login details. Facebook will never ask for your password via email or text message.</p>
-            <a href="https://www.facebook.com/help/174459804819854" target="_blank" class="cta-btn">Learn About Phishing Scams</a>
+        
+        
+        
+        
+        
+        
+        <div class="naviBtn">
+          <div class="naviLogo">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <div class="naviText" id="mk-hide">
+            <b>
+            Marketing
+            </b>
+          </div>
+          </div>
+        
+        <div class="mk-hidden" id="mk-hidden">
+          <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-comment-nodes"></i>
+           </div>
+           <div class="naviText2"><b>
+             Facebook-MK
+             </b>
+           </div>
+          </div>
+        
+        
+           <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-comment-nodes"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+             Google-MK
+           </b>
+         </div>
+          </div>  
+        
+         <div class="naviBtn">
+           <div class="naviLogo">
+            <i class="fa-solid fa-comment-nodes"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+             Twitter-MK
+           </b>
+         </div>
+          </div>  
+          
+          
+          <div class="naviBtn">
+         <div class="naviLogo">
+          <i class="fa-solid fa-comment-nodes"></i>
+           </div>
+           <div class="naviText2">
+            <b>
+            WhatsApp-MK
+            </b>
+            </div>
+             </div>
+        
+        
+        
+                 <div class="naviBtn">
+         <div class="naviLogo">
+          <i class="fa-solid fa-comment-nodes"></i>
+           </div>
+           <div class="naviText2">
+            <b>
+            Instagram-MK
+            </b>
+            </div>
+             </div>
         </div>
-    </section>
+        
+         
+         
+        
+        
+        
+        
+        <div class="naviBtn">
+          <div class="naviLogo">
+            <i class="fa-solid fa-envelopes-bulk"></i>
+          </div>
+          <div class="naviText" id ="ck-hide">
+            <b>
+            Cracking
+            </b>
+          </div>
+          </div>
+        
+        <div class="ck-hidden" id="ck-hidden">
+          <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-person-circle-plus"></i>
+           </div>
+           <div class="naviText2"><b>
+             Gmail-UL
+             </b>
+           </div>
+          </div>
+        
+        
+           <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-person-circle-plus"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+             Facebook-UL
+           </b>
+         </div>
+          </div>  
+        
+         <div class="naviBtn">
+           <div class="naviLogo">
+             <i class="fa-solid fa-person-circle-plus"></i>
+           </div>
+         <div class="naviText2">
+           <b>
+          WhatsApp-UL
+           </b>
+         </div>
+          </div>  
+          </div>
+        
+        
+        
+        
+        
+        
+         
+         
+        
+        
+        
+      </div>
+      <div class="containt-Box">
+        
+        
+        
+        
+      <!DOCTYPE html>
+<html>
 
-    <section id="resources">
-        <h2>Additional Resources</h2>
-        <p>For more information on securing your Facebook account, check out these resources:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/help/203305893040179" target="_blank">Facebook Help Center</a></li>
-            <li><a href="https://www.facebook.com/help/113149312377496" target="_blank">How to Set Up Two-Factor Authentication</a></li>
-        </ul>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  * {
+    margin:0px;
+    padding:0px;
+  }
+   .post-box {
+     background:grey;
+     height:250px;
+     
+   }
+  .post {
+    width:100%;
+    height:180px;
+    
+  }
+  .post-text {
+    height:70px;
+    background: white;
+    
+  }
+ .text {
+   padding:10px;
+ }
+  </style>
+</head>
 
-    <footer>
-        <p>&copy; 2025 Facebook Security. All rights reserved.</p>
-    </footer>
+<body>
+  <div class="post-box">
+    <div class="post">
+      <video width="100%" height="100%" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="post-text">
+      <p class="text">Sonng au nere me supna stidio stage rampur hat bbaghra</p>
+    </div>
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="post-box">
+    <div class="post">
+      <video width="100%" height="100%" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="post-text">
+      <p class="text">text</p>
+    </div>
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="post-box">
+    <div class="post">
+      <video width="100%" height="100%" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="post-text">
+      <p class="text">text</p>
+    </div>
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="post-box">
+    <div class="post">
+      <video width="100%" height="100%" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="post-text">
+      <p class="text">text</p>
+    </div>
+  </div>
+ 
+ 
+ 
+ 
 
+
+
+
+
+<div class="post-box">
+    <div class="post">
+      <video width="100%" height="100%" controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="post-text">
+      <p class="text">text</p>
+    </div>
+  </div>
+ 
+ 
 </body>
+
+</html>
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  
+  </container>
+  
+
+
+
+
+
+
+ <script>
+   let toggleBtn = document.getElementById("toggle");
+let navigation = document.getElementById("navigationBar");
+toggleBtn.addEventListener("click", function() {
+  
+  if (navigation.style.display === "block") {
+    navigation.style.display = "none";
+  } else(navigation.style.display = "block");
+});
+
+
+
+
+let dbBtn = document.getElementById("db-hide");
+let dbHidden = document.getElementById("db-hidden");
+dbBtn.addEventListener("click", function() {
+  
+  let heading = document.getElementById("heading");
+  heading.innerText="Dashboard";
+
+  
+  
+  if (dbHidden.style.display === "block") {
+    dbHidden.style.display = "none";
+  } else(dbHidden.style.display = "block");
+});
+
+
+
+let mkBtn = document.getElementById("mk-hide");
+let mkHidden = document.getElementById("mk-hidden");
+mkBtn.addEventListener("click", function() {
+    let heading = document.getElementById("heading");
+  heading.innerText = "Marketing";
+  if (mkHidden.style.display === "block") {
+    mkHidden.style.display = "none";
+  } else(mkHidden.style.display = "block");
+});
+
+
+
+
+let ckBtn = document.getElementById("ck-hide");
+let ckHidden = document.getElementById("ck-hidden");
+ckBtn.addEventListener("click", function() {
+  let heading = document.getElementById("heading");
+  heading.innerText="Cracking";
+  
+  if (ckHidden.style.display === "block") {
+    ckHidden.style.display = "none";
+  } else(ckHidden.style.display = "block");
+});
+
+
+
+
+
+let toggleBtn2 = document.getElementById("toggle");
+let naviTwo = document.getElementById("navi2");
+toggleBtn2.addEventListener("click", function() {
+  
+  if (navi2.style.display === "block") {
+    navi2.style.display = "none";
+  } else(navi2.style.display = "block");
+});
+
+
+
+ </script>
+</body>
+
 </html>
